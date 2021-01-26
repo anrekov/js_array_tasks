@@ -44,25 +44,16 @@
         console.log('\nTask 3:');
         arr3 = [31, 10, 'chicken', 9, 'fish', 10];
         console.log('Sourse3: ', arr3);
-        //only strings, only 10 - numb
-        let arrTen = [];
-        arr3.forEach(element => {
-            if (element === 10) {
-                arrTen.push(element);
-            }
+
+        var arrTen = arr3.filter(function(elem) {
+            return elem === 10;
         });
         console.log('Array with only 10:', arrTen);
 
-        function sortForStr (arg) {
-            let result = [];
-            arg.forEach(element => {
-                if (typeof(element) == 'string') {
-                    result.push(element);
-                }
-            });
-            return (result);
-        }
-        console.log('Array of strings: ', sortForStr(arr3));
+        var arrStr = arr3.filter(function(elem) {
+            return typeof(elem) == 'string';
+        });
+        console.log('Array of strings: ', arrStr);
 
     </script>
 </body>
